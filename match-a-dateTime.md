@@ -6,7 +6,7 @@ Regex or Regular expressions are patterns used to match character combinations i
 
 This tutorial is going to explain the use of regex to match dateTimes using the following expression
 ```js
-let dateTimeRegex = ^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1,4} B?CE \b([1-9]|1[0-2])\b:[0-5][0-9] (P|A){1}M$
+let dateTimeRegex = /^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1,4} B?CE \b([1-9]|1[0-2])\b:[0-5][0-9] (P|A){1}M$/g
 ```
 
 ## Table of Contents
