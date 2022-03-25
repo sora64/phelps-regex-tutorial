@@ -6,7 +6,7 @@ Regex or Regular expressions are patterns used to match character combinations i
 
 This tutorial is going to explain the use of regex to match dateTimes using the following expression
 ```js
-let dateTimeRegex = ^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1,4} B?CE \b([1-9]|1[0-2])\b:[0-5][0-9] A?P?M$
+let dateTimeRegex = ^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1,4} B?CE \b([1-9]|1[0-2])\b:[0-5][0-9] (P|A)+M$
 ```
 
 ## Table of Contents
@@ -30,16 +30,22 @@ let dateTimeRegex = ^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1
 ____
 `$` Indicates the ending of the string.
 
-### Quantifiers `? {}`
-`?` Makes the preceding character optional.
+### Quantifiers `{} ? +`
+`{}` Match between a certain range of the preceding token.
 
-Examples from the regex:
-1. `B?CE` allows users to have a value of either `BCE` or `CE` for the era of their dateTime's year.
-2. `A?P?M` allows users to have a value of either `AM` or `PM` for to specify whether their dateTime is in the morning or afternoon.
-____
-`{}` Sets either an exact amount, min and max, or more than one copies of the sequence before the quantifiers.
 Example from the regex:
-1. `{1,4}` allows users to input up to 4 digits, but no less than 1 digit, for their dateTime's year value.
+* `{1,4}` allows users to input up to 4 digits, but no less than 1 digit, for their dateTime's year value.
+____
+`?` Match between 0-1 of the preceding token.
+
+Example from the regex:
+* `B?CE` allows users to have a value of either `BCE` or `CE` for the era of their dateTime's year.
+____
+`+` Match 1 or more of the preceding token.
+
+Example from the regex:
+* `(P|A)+M` allows users to have a value of either `AM` or `PM` to specify whether their dateTime is in the morning or afternoon.
+
 
 ### OR Operator
 
