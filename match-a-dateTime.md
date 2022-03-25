@@ -1,10 +1,13 @@
-# Title (replace with your title)
+# Match a DateTime
 
-Introductory paragraph (replace this with your text)
+Regex or Regular expressions are patterns used to match character combinations in strings. In this tutorial we'll see how to use a regex to match dates alongside specific times. An example of such a dateTime would be `3/25/2022 CE 12:49 PM`, with `CE` meaning "Common Era", which can also be replaced for ancient dates by `BCE` meaning "Before the Common Era".
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial is going to explain the use of regex to match dateTimes using the following expression
+```js
+let dateTimeRegex = ^\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1,4} B?CE \b([1-9]|1[0-2])\b:[0-5][0-9] P?A?M$
+```
 
 ## Table of Contents
 
