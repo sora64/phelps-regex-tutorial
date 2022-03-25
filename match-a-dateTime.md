@@ -34,7 +34,7 @@ ____
 `{}` Match between a certain range of the preceding token.
 
 Examples from the regex:
-1. `{1,4}` allows users to input up to 4 digits, but no less than 1 digit, for their dateTime's year value.
+1. `\d{1,4}` allows users to input up to 4 digits, but no less than 1 digit, for their dateTime's year value.
 2. `(P|A){1}M` allows users to have a value of either `AM` or `PM` to specify whether their dateTime is in the morning or afternoon.
 
 ____
