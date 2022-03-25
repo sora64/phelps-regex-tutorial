@@ -11,7 +11,7 @@ let dateTimeRegex = /\b([1-9]|1[0-2])\b[\/-]\b([1-9]|[12][0-9]|3[01])\b[\/-]\d{1
 
 ## Table of Contents
 
-- [Anchors](#anchors)
+<!-- - [Anchors](#anchors) -->
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
